@@ -3,6 +3,87 @@
     <head>
         <title> Toluwalope
         </title>
+        <style>
+            body{
+                background-color: black;
+                }
+            img{
+                width: 10%;    
+                }
+            
+            h2{
+                    color: orange;
+                    font-family: verdana;
+                }
+            p{
+                    color: orange;
+                    font-family: verdana;
+                }
+            li{
+                color: white;
+                font-family: verdana;
+            }
+            h3{
+                color: indigo;
+                font-family: verdana;
+            }
+            ul{
+                color: white;
+                font-family: verdana;
+            }
+            
+            .contact{
+                text-align: center;
+            }
+            label{
+                color: white;
+                font-family: verdana;
+                clear: left;
+                float: left;
+                width: 5em;
+                text-align: right;
+                margin-right: .5em;
+                padding-bottom: 2em;
+            }
+            
+            input {
+                    float: left;
+                     width: 30em;
+                    }
+            textarea {
+                    float: left;
+                    width: 30em;
+                    height: 7em;
+                    font-family: verdana;
+                    }
+            button {
+                    float: left;
+                    clear: both;
+                    margin-left: 20em;
+                    margin-top: 2em;
+                    
+                    }
+            
+        </style>
+        <script type="text/javascript">
+             
+             function validate() {
+             name= document.getElementById("txtName").value;
+             
+             message= document.getElementById("txtMessage").value;
+             
+            
+            if(name.length < 4){
+                alert ("Name length is too short");
+            }
+            
+            if(message.length < 20){
+                alert("message is too short");
+            }
+             }
+            
+                
+        </script>
     </head>
     <body>
         <img src= https://res.cloudinary.com/akofe/image/upload/v1566599652/_20190418_080206_hf0ddt.jpg alt= MyPicture>
@@ -52,5 +133,20 @@
                 <b>Obafemi Awolowo University</b> - <i>B.Sc Economics</i>
             </li>
         </ul>
+     <h2 class="contact">
+        CONTACT FORM
+     </h2>
+        <form action="" id="myform">
+            <label> Name:</label>
+                <input type="text" placeholder="Enter your name" id="txtName" required>
+                    <label> Email:</label>
+                        <input type="email" placeholder="Enter your email address" id ="txtEmail" required>
+                            <label> Title:</label>
+                                <input type="text" placeholder="Enter the title of your message" id="txtTitle" required>
+                                        <label> Message:</label>
+                                            <textarea placeholder="Enter your message" id="txtMessage" required></textarea>
+                                                    <button type="submit" onclick= "validate()"> Submit</button>
+                        
+                </form>
     </body>
 </html>
